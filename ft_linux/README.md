@@ -23,9 +23,11 @@ At the launch, do not INSTALL it, but choose "Try Ubuntu" to make it a LiveCD ve
 If you know your VirtualBox IP, it may not change go directly to the Port Forwarding
 If not follow this:
 
-```sudo su
+```
+sudo su
 apt install -y net-tools
-ifconfig```
+ifconfig
+```
 
 Keep the address in mind and turn off the machine
 
@@ -37,10 +39,13 @@ Turn on the machine, still in LiveCD
 
 ### Setup OpenSSH
 
-```sudo su
+```
+sudo su
 apt install -y openssh-server
 echo "PermitEmptyPasswords yes" >> /etc/ssh/sshd_config
-systemctl restart sshd```
+systemctl restart sshd
+```
+
 Now you can use whatever SSH you want with `ssh -p 2222 ubuntu@127.0.0.1`
 
 No password is required, but if you already used this method on other machine, make sure to edit your .ssh/known_hosts and delete the line of 127.0.0.1
@@ -55,16 +60,19 @@ add `universe multiverse` at the end of the second line
 
 ### Installing packages
 
-```apt update
+```
+apt update
 apt install -y gcc g++ texinfo gawk binutils bison make m4 build-essential
 rm -f /bin/sh
-ln -s /bin/bash /bin/sh```
+ln -s /bin/bash /bin/sh
+```
 
 Once done make sure everything is ok
 
 ### Testing
 
-```cat > version-check.sh << "EOF"
+```
+cat > version-check.sh << "EOF"
 #!/bin/bash
 export LC_ALL=C
 bash --version | head -n1 | cut -d" " -f2-4
@@ -111,7 +119,8 @@ if [ -x dummy ]
 then echo "g++ compilation OK";
 else echo "g++ compilation failed"; fi
 rm -f dummy.c dummy
-EOF```
+EOF
+```
 
 `bash version-check.sh`
 
