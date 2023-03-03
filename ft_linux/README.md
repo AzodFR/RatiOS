@@ -143,7 +143,7 @@ Don't forget to Write it before Quitting
 
 Now, still as root you can copy paste the following code to create the /mnt/lfs and downloading every required packages
 
-[1_first_step.sh](https://github.com/AzodFR/RatiOS/ft_linux/1_first_step.sh)
+[1_first_step.sh](https://github.com/AzodFR/RatiOS/blob/master/ft_linux/1_first_step.sh)
 
 After this you need to set a password to lfs user
 
@@ -161,6 +161,6 @@ Now connect to this user with
 
 You can now copy paste the following code, it may take a while but everything must be done
 
-(You can change every `make -j5` with the number of allocated cores, if you have 8 cores on this machine, use -j8)
+(You can change every `make -j5` with the number of allocated cores, if you have **8** cores on this machine, use `make -j8`)
 
-[2_second_step.sh](https://github.com/AzodFR/RatiOS/ft_linux/2_second_step.sh)
+[2_second_step.sh](https://github.com/AzodFR/RatiOS/blob/master/ft_linux/2_second_step.sh)
