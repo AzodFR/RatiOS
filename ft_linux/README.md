@@ -149,7 +149,7 @@ After this you need to set a password to lfs user
 
 `passwd lfs`
 
-You can just set it blank by entering Enter 2 times, but you need to do it
+You can just set it blank by pressing Enter 2 times, but you need to do it
 
 Now connect to this user with
 
