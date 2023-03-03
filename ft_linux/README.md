@@ -155,7 +155,7 @@ Now connect to this user with
 
 `su - lfs`
 
-## Second Step
+## Second Step 
 
 /!\ Make sur you are connected with lfs user, not the root
 
@@ -164,3 +164,5 @@ You can now copy paste the following code, it may take a while but everything mu
 (You can change every `make -j5` with the number of allocated cores, if you have **8** cores on this machine, use `make -j8`)
 
 [2_second_step.sh](https://github.com/AzodFR/RatiOS/blob/master/ft_linux/2_second_step.sh)
+
+## Third step (chroot)
