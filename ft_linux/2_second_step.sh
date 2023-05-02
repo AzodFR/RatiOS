@@ -38,7 +38,7 @@ cd build
              --enable-gprofng=no \
              --disable-werror
 
-make -j5
+make -j8
 
 make install
 
@@ -88,7 +88,7 @@ cd       build
     --disable-libstdcxx       \
     --enable-languages=c,c++
 
-make -j5
+make -j8
 
 make install
 
@@ -144,7 +144,7 @@ echo "rootsbindir=/usr/sbin" > configparms
       --with-headers=$LFS/usr/include    \
       libc_cv_slibdir=/usr/lib
 
-make -j5
+make -j8
 
 make DESTDIR=$LFS install
 
@@ -175,7 +175,7 @@ cd build
     --disable-libstdcxx-pch         \
     --with-gxx-include-dir=/tools/$LFS_TGT/include/c++/12.2.0
 
-make -j5
+make -j8
 
 make DESTDIR=$LFS install
 
@@ -193,7 +193,7 @@ cd m4-1.4.19
             --host=$LFS_TGT \
             --build=$(build-aux/config.guess)
 
-make -j5
+make -j8
 
 make DESTDIR=$LFS install
 
@@ -227,7 +227,7 @@ popd
             --disable-stripping          \
             --enable-widec
 
-make -j5
+make -j8
 
 make DESTDIR=$LFS TIC_PATH=$(pwd)/build/progs/tic install
 echo "INPUT(-lncursesw)" > $LFS/usr/lib/libncurses.so
@@ -245,7 +245,7 @@ cd bash-5.2.15
             --host=$LFS_TGT                    \
             --without-bash-malloc
 
-make -j5
+make -j8
 
 make DESTDIR=$LFS install
 
@@ -265,7 +265,7 @@ cd coreutils-9.1
             --enable-install-program=hostname \
             --enable-no-install-program=kill,uptime
 
-make -j5
+make -j8
 
 make DESTDIR=$LFS install
 
@@ -284,7 +284,7 @@ cd diffutils-3.9
 
 ./configure --prefix=/usr --host=$LFS_TGT
 
-make -j5
+make -j8
 
 make DESTDIR=$LFS install
 
@@ -326,7 +326,7 @@ cd findutils-4.9.0
             --host=$LFS_TGT                 \
             --build=$(build-aux/config.guess)
 
-make -j5
+make -j8
 
 make DESTDIR=$LFS install
 
@@ -344,7 +344,7 @@ sed -i 's/extras//' Makefile.in
             --host=$LFS_TGT \
             --build=$(build-aux/config.guess)
 
-make -j5
+make -j8
 
 make DESTDIR=$LFS install
 
@@ -359,7 +359,7 @@ cd grep-3.8
 ./configure --prefix=/usr   \
             --host=$LFS_TGT
 
-make -j5
+make -j8
 
 make DESTDIR=$LFS install
 
@@ -373,7 +373,7 @@ cd gzip-1.12
 
 ./configure --prefix=/usr --host=$LFS_TGT
 
-make -j5
+make -j8
 
 make DESTDIR=$LFS install
 
@@ -394,7 +394,7 @@ sed -e '/ifdef SIGPIPE/,+2 d' \
             --host=$LFS_TGT \
             --build=$(build-aux/config.guess)
 
-make -j5
+make -j8
 
 make DESTDIR=$LFS install
 
@@ -410,7 +410,7 @@ cd patch-2.7.6
             --host=$LFS_TGT \
             --build=$(build-aux/config.guess)
 
-make -j5
+make -j8
 
 make DESTDIR=$LFS install
 
@@ -425,7 +425,7 @@ cd sed-4.9
 ./configure --prefix=/usr   \
             --host=$LFS_TGT
 
-make -j5
+make -j8
 
 make DESTDIR=$LFS install
 
@@ -441,7 +441,7 @@ cd tar-1.34
             --host=$LFS_TGT                   \
             --build=$(build-aux/config.guess)
 
-make -j5
+make -j8
 
 make DESTDIR=$LFS install
 
@@ -459,7 +459,7 @@ cd xz-5.4.1
             --disable-static                  \
             --docdir=/usr/share/doc/xz-5.4.1
 
-make -j5
+make -j8
 
 make DESTDIR=$LFS install
 
@@ -488,13 +488,13 @@ cd       build
     --disable-werror           \
     --enable-64-bit-bfd
 
-make -j5
+make -j8
 
 make DESTDIR=$LFS install
 
 rm -v $LFS/usr/lib/lib{bfd,ctf,ctf-nobfd,opcodes}.{a,la}
 
-cd ..
+cd ../..
 
 rm -rf binutils-2.40
 
@@ -539,12 +539,12 @@ cd       build
     --disable-libvtv                               \
     --enable-languages=c,c++
 
-make -j5
+make -j8
 
 make DESTDIR=$LFS install
 
 ln -sv gcc $LFS/usr/bin/cc
 
-cd ..
+cd ../..
 
 rm -rf gcc-12.2.0
