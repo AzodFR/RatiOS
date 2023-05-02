@@ -227,3 +227,10 @@ make install
 cd ../
 rm -rf util-linux-2.38.1
 
+
+rm -rf /usr/share/{info,man,doc}/*
+
+find /usr/{lib,libexec} -name \*.la -delete
+
+rm -rf /tools
+
