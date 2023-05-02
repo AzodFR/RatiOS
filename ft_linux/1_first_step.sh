@@ -22,6 +22,7 @@ wget http://ftp.wrz.de/pub/LFS/lfs-packages/lfs-packages-11.3.tar
 wget https://ftp.gnu.org/gnu/wget/wget-1.21.1.tar.gz
 wget https://github.com/djlucas/make-ca/releases/download/v1.7/make-ca-1.7.tar.xz
 wget https://github.com/p11-glue/p11-kit/releases/download/0.24.0/p11-kit-0.24.0.tar.xz
+wget http://ftp.wrz.de/pub/LFS/lfs-packages/11.3/Python-3.11.2.tar.xz
 
 tar xvf lfs-packages-11.3.tar 
 
